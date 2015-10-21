@@ -7,8 +7,11 @@
 body {
     margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     color:#090909;
-    
+    font-family: Comic Sans MS;
+     background-color:#f5bc0b;
 }
+
+
 
 .header-image {
     display: block;
