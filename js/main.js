@@ -1,7 +1,7 @@
 
 var data = {
     "menu":{
-            "main": "TAXI 2",
+            "main": "TAXI",
             "cennik": "CENNIK",
             "kierowci": "DLA KIEROWCÓW",
             "kontakt": "KONTAKT"
