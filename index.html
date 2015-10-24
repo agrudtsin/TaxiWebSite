@@ -1,184 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>
+            BeeBeep TAXI Warszawa
+        </title>
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/one-page-wonder.css" rel="stylesheet">
+    </head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <body>
+        <div id="handlebars-results"></div>
+        <script id="results-template" type="text/x-handlebars-template">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">{{menu.main}}</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#cennik" id="menu.cennik">{{menu.cennik}}</a>
+                            </li>
+                            <li>
+                                <a href="#kierowci">{{menu.kierowci}}</a>
+                            </li>
+                            <li>
+                                <a href="#kontakt">{{menu.kontakt}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
 
-    <title>BeeBeep TAXI Warszawa</title>
+            </nav>
+            <!-- Full Width Image Header -->
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+            <div class="container">
+                <div class="featurette">
 
-    <!-- Custom CSS -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">TAXI</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#cennik">CENNIK</a>
-                    </li>
-                    <li>
-                        <a href="#kierowci">DLA KIEROWCÓW</a>
-                    </li>
-                    <li>
-                        <a href="#kontakt">KONTAKT</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-            
-    </nav>
-        <!-- Full Width Image Header -->
-
-    <div class="container">     
-      <div class="featurette" >
-           
-            <img class="featurette-image img-circle img-responsive pull-right" src="img/beebep-logo.jpg">
-            <h1 class="featurette-heading"><strong>BeeBeep Taxi</strong> </h1>
-            <h2><strong>(22) 390-4-390</strong></br>888 588 288</br>888 555 255</h2>
-            <a type="button" class="btn btn-default btn-lg btn-warning visible-xs-inline-block" href = "tel:223904390">
-                    <solid>Позвонить c мобильного</solid>
-                </a>
-            <p class="lead">
-            - nie stresuj się naliczaniem licznika;</br>
-            - mówisz nam skąd dokąd cię zawieźć, a my ci mówimy ile to będzie kosztować;</br>
-            - nikt cię nie oszuka;</br>
-            - zapewniamy spokojną i komfortową jazdę;</br>
-            - zawieziemy klienta do każdego miejsca gdzie zechce;</br>
-            - posiadamy opcję call back, czyli dzwonisz do nas na stacjonarny numer, a my do ciebie oddzwonimy;</br>
-            </p>
-            
-        </div>      
-    </div>   
-    
-   
-    <!-- Page Content -->
- 
-    <div class="container" id="cennik" >
-        <hr class="featurette-divider">
-
-        <!-- First Featurette -->
-        <div class="featurette" >
-            <img class="featurette-image img-circle img-responsive pull-left hidden-xs" src="img/taxi-car.jpg">
-            <h2 class="featurette-heading"><strong>CENNIK</strong>
-               
-            </h2>
-            <p class="lead">Opłata początkowa 8 zł</br>
-                Strefa 1 od 06:00-22:00 - 1,39 zł/km</br>
-                Strefa 2 od 06:00-22:00 - 2,78 zł/km</br>
-                Strefa 1 od 22:00-06:00 - 2,10 zł/km</br>
-                Strefa 2 od 22:00-06:00 - 4,00 zł/km</br>
-                </br>
-                W voskresije i prazdniki celyj den - 4zł/km</br>
-                Opłata za godzinę postoju 20 zł</br>
-                Oplatu za bus</br>
-                
-            </p>
-        </div>
-   </div>
-    <div class="container" id="kierowci" >
-        <hr class="featurette-divider">
-
-        <!-- Second Featurette -->
-        <div class="featurette" >
-            <img class="featurette-image img-circle img-responsive pull-right hidden-xs" src="img/taxi-driver.jpg">
-            <h2 class="featurette-heading"><strong>OFERTA  WSPÓŁPRACY DLA KIEROWCÓW</strong></h2>
-            <p class="lead">Zapraszamy do współpracy przewoźników z własnym samochodem</p>
-            <ul style="list-style-type:square">
-                <li>ukończone 21lat;						
-                <li>prawo jazdy kat. B;</li>						
-                <li>samochód osobowy 4/5 drzwi;</li>						
-                <li>bus;</li>						
-                <li>orzeczenie o niekaralności;</li>						
-                <li>badanie lekarskie i psychotechniczne;</li>						
-                <li>wysoka kultura osobista;</li>						
-                <li>biegła znajomość j. polskiego.</li>
-            </ul>
-            Dodatkowe informacje udzielane są po numerem telefonu</br>798-965-965
-        </div>
-    </div>
-    <div class="container" id="kontakt" >    
-        <hr class="featurette-divider">
-
-        <!-- Third Featurette -->
-        <div class="featurette" id="contact">
-            <img class="featurette-image img-circle img-responsive pull-left hidden-xs" src="http://mtdata.ru/u26/photoD993/20583633620-0/original.jpeg">
-            <h2 class="featurette-heading"><strong>KONTAKT</strong>
-            </h2>
-            <p class="lead"><strong>Centrala</strong></br>
-            Biuro 798 965 965</br>
-            (22) 390 4 390</br>		
-            (22) 749 9 999</br>		
-            888 588 288</br>		
-            888 555 255</br>		
-            </p>
-             <p class="lead"><strong>Adres mailowy:</strong></br>beebeeppl@gmail.com</p>
-
-        </div>
-    </div>
-        <hr class="featurette-divider">
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <img class="featurette-image img-circle img-responsive pull-right" src="img/beebep-logo.jpg">
+                    <h1 class="featurette-heading"><strong>{{main-paragrph.headline}}</strong> </h1>
+                    <h2><strong>{{main-paragrph.tel1}}</strong></br>{{main-paragrph.tel2}}</br>{{main-paragrph.tel3}}</h2>
+                    <a type="button" class="btn btn-default btn-lg btn-warning visible-xs-inline-block" href="tel:{{main-paragrph.call-button-phone}}">
+                        <solid>{{main-paragrph.call-button-text}}</solid>
+                    </a>
+                    </br>
+                    <ul style="list-style-type:square">
+                        {{#main-paragrph.list}}
+                        <li>{{item}}</li>
+                        {{/main-paragrph.list}}
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <div class="container" id="cennik">
+                <hr class="featurette-divider">
+                <div class="featurette">
+                    <img class="featurette-image img-circle img-responsive pull-left hidden-xs" src="img/taxi-car.jpg">
+                    <h2 class="featurette-heading"><strong>{{second-paragrph.headline}}</strong></h2>
+                    <p class="lead">{{#second-paragrph.list}}
+                        {{item}}</br>
+                    {{/second-paragrph.list}}</p>
+                </div>
+            </div>
+            <div class="container" id="kierowci">
+                <hr class="featurette-divider">
+                <div class="featurette">
+                    <img class="featurette-image img-circle img-responsive pull-right hidden-xs" src="img/taxi-driver.jpg">
+                    <h2 class="featurette-heading"><strong>{{third-paragrph.headline}}</strong></h2>
+                    <p class="lead">{{third-paragrph.text1}}</p>
+                    <ul style="list-style-type:square">{{#third-paragrph.list}}
+                        <li>{{item}}</li>
+                    {{/third-paragrph.list}}</ul>
+                    {{third-paragrph.text2}}</br>{{third-paragrph.phone}}
+                </div>
+            </div>
+            <div class="container" id="kontakt">
+                <hr class="featurette-divider">
 
-    </div>
-    <!-- /.container -->
+                <!-- Third Featurette -->
+                <div class="featurette" id="contact">
+                    <img class="featurette-image img-circle img-responsive pull-left hidden-xs" src="http://mtdata.ru/u26/photoD993/20583633620-0/original.jpeg">
+                    <h2 class="featurette-heading"><strong>{{fourth-paragrph.headline}}</strong>
+            </h2>
+                    <p class="lead"><strong>{{fourth-paragrph.biuro}}</strong></br>
+                    {{fourth-paragrph.biuro-phone}}
+                    </p>
+                    <p class="lead"><strong>{{fourth-paragrph.centrala}}</strong></br>
+                    {{#fourth-paragrph.list}}    
+                        {{item}}</br>
+                    {{/fourth-paragrph.list}}    
+                    </p>
+                    <p class="lead"><strong>{{fourth-paragrph.text2}}</strong></br>{{fourth-paragrph.email}}</p>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+                </div>
+            </div>
+            <hr class="featurette-divider">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright &copy; Your Website 2014</p>
+                    </div>
+                </div>
+            </footer>
 
-  ga('create', 'UA-68775800-1', 'auto');
-  ga('send', 'pageview');
+            </div>
+            <!-- /.container -->
 
-</script>
+        </script>
+        <script src="js/handlebars.js"></script>
+        <script src="js/main.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-</body>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-</html>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-68775800-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+
+    </html>
